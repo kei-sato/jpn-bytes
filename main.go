@@ -20,6 +20,7 @@ func main() {
 		abort()
 	}
 
+	fmt.Printf("     UTF8 : %s\n", hex.EncodeToString([]byte(str)))
 	fmt.Printf("    EUCJP : %s\n", encode(str, japanese.EUCJP.NewEncoder()))
 	fmt.Printf("ISO2022JP : %s\n", encode(str, japanese.ISO2022JP.NewEncoder()))
 	fmt.Printf(" ShiftJIS : %s\n", encode(str, japanese.ShiftJIS.NewEncoder()))
